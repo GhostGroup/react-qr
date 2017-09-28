@@ -1,11 +1,11 @@
 {
   "name": "react-qr",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React QR Code Component",
   "main": "dist.js",
   "scripts": {
-    "build": "babel index.js > dist.js",
-    "test": "npm run-script build && standard && mocha --compilers js:babel/register test.js"
+    "build": "babel index.js --out-file dist.js",
+    "test": "standard index.js && npm run-script build && mocha test.js"
   },
   "repository": {
     "type": "git",
@@ -27,16 +27,25 @@
     "qr-image": "^3.1.0"
   },
   "devDependencies": {
-    "babel": "^5.6.14",
-    "jsdom": "^3.1.2",
-    "mocha": "2.x",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "jsdom": "^11.2.0",
+    "mocha": "^3.5.3",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-tools": "^0.13.3",
-    "standard": "4.x"
+    "standard": "^10.0.3"
   },
   "peerDependencies": {
-    "react": "*"
+    "react": "^16.0.0",
+    "prop-types": "^15.6.0"
   },
   "standard": {
+    "parser": "babel-eslint",
     "ignore": [
       "dist.js"
     ]
