@@ -13,6 +13,8 @@ class ReactQR extends Component {
 }
 
 ReactQR.displayName = 'ReactQR'
-ReactQR.propTypes = PropTypes.string.isRequired
+ReactQR.propTypes = {
+  text: PropTypes.string.isRequired
+}
 
 module.exports = ReactQR

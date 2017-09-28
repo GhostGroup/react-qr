@@ -44,6 +44,8 @@ var ReactQR = function (_Component) {
 }(_react.Component);
 
 ReactQR.displayName = 'ReactQR';
-ReactQR.propTypes = _propTypes2.default.string.isRequired;
+ReactQR.propTypes = {
+  text: _propTypes2.default.string.isRequired
+};
 
 module.exports = ReactQR;
